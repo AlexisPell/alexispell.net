@@ -1,0 +1,11 @@
+deployment:
+  name: auth
+  replicas: 2
+  container:
+    image: cr.selcloud.ru/my-registry/creep-auth:latest
+    port: 8081
+service:
+  name: auth
+  port: 8081
+
+host: alexispell.net

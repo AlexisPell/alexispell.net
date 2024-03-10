@@ -1,0 +1,13 @@
+deployment:
+  name: gateway
+  replicas: 2
+  container:
+    image: cr.selcloud.ru/my-registry/creep-gateway:latest
+    port: 80
+service:
+  name: gateway
+  port: 80
+ingress:
+  name: gateway-ingress
+
+host: alexispell.net

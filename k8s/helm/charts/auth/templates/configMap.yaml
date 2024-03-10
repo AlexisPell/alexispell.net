@@ -1,0 +1,12 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: auth-configmap
+  namespace: default
+data:
+  PORT: "{{ toString .Values.service.port }}"
+  ENV: prod
+  AUTH_URL: auth:8081 # wont work, todo
+  WEB_URL: {{ .Values.host }}
+  GOOGLE_CLIENT_ID: 942202751115-ulvm5lfod94le6u4slh13ucdpqvqdoke.apps.googleusercontent.com
+  GOOGLE_CLIENT_SECRET: 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
